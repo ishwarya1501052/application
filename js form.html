@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html>
+<title> 
+   MY FORM
+</title>
+<script>
+function getvalues(){
+ document.getElementById('demo').innerHTML= document.form1.first_name.value + document.form1.last_name.value 
++ "is a" +  document.form1.gender  ;
+ if(document.form1.first_name.value == "")
+   alert("Name must be filled"); return false;
+ 
+ }
+</script>
+<h1 style="font-size:25px;text-align:center;"> FILL THIS FORM </h2>
+<body>
+ <body style="background-color:violet">
+<form name="form1">
+<p id="demo"></p>
+ First name:<input type="text" name="first_name" />
+ <br>
+
+ Last name:<input type="text" name="last_name" />
+ <br>
+
+ DOB:<input type="text"/>
+ <br> 
+
+ <label for="gender">Gender:</label>
+ <input type="radio" name="gender" value="male" />Male
+ <input type="radio" name="gender" value="female" />Female
+ <br>
+
+ <label for="hobby">Hobby:</label>
+ <input type="checkbox" name="cricket" value="cricket" />Cricket
+ <input type="checkbox" name="football" value="football" />Football
+ <br>
+
+ <label for="address">Address</label>
+ <textarea rows="6" cols="25" name="address"></textarea>	
+ <br>
+
+ <label for="email">Email:</label>
+ <input type="text" name="email" maxlength="50" value="" class="input"/>
+ <br>
+
+ <label for="country">Select Country:</label>
+ <select name="country">
+ <option value="Asia">India</option>
+ <option value="Aus">Australia</option>
+ <option value="LO">London </option>
+ </select>
+ <br>
+
+ City :<input type="text" />
+ <br>
+ <input type="submit" value="Submit" class="submit" onclick="getvalues(); return false;"/>	
+
+</form>
+</body>
+</html>
